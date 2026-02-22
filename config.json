@@ -1,0 +1,19 @@
+config.json.json
+{
+  "chainId": 101, 
+  "networkId": 1,
+  "logLevel": "INFO",
+  "p2p": {
+    "tcpUrl": "tcp://yourdomain.com:30303",
+    "extUrl": "tcp://your-public-ip:30303"
+  },
+  "rpc": {
+    "rpcUrl": "http://localhost:8080",
+    "timeout": 30
+  },
+  "genesis": {
+    "ticker": "FNDN",
+    "chainName": "The Foundation",
+    "precision": 6
+  }
+}
