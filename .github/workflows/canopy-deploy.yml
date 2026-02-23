@@ -2,7 +2,7 @@ yaml
 name: Deploy Foundation-Core to Canopy
 on:
   push:
-    branches: [ main ] # This triggers the launch when you save/push
+    branches: [ main ]
 
 jobs:
   deploy:
