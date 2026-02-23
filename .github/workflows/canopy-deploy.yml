@@ -1,0 +1,24 @@
+yaml
+name: Deploy Foundation-Core to Canopy
+on:
+  push:
+    branches: [ main ] # This triggers the launch when you save/push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Canopy CLI
+        run: |
+          curl -sL https://get.canopynetwork.org | sh
+          echo "$HOME/.canopy/bin" >> $GITHUB_PATH
+
+      - name: Deploy Sub-chain
+        env:
+          CANOPY_DEPLOY_TOKEN: ${{ secrets.CANOPY_DEPLOY_TOKEN }}
+        run: canopy deploy --config canopy.yaml --network betanet
