@@ -1,0 +1,15 @@
+yaml
+# Foundation-Core Layer 2 Configuration
+project:
+  name: "foundation-core"
+  chain_id: "foundation-net-l2-01"
+  version: "1.0.0"
+
+network:
+  type: "sub-chain"
+  parent: "canopy-main"
+  security: "shared"
+
+deployment:
+  mode: "launchpad"
+  environment: "betanet"
